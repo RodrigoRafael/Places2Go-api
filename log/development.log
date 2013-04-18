@@ -1,0 +1,1279 @@
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (172.2ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (113.3ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)
+  [1m[36m (2.8ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to CreatePlaces (20130415142125)
+  [1m[35m (187.3ms)[0m  CREATE TABLE `places` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `city` varchar(255), `state` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (22.7ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20130415142125')[0m
+  [1m[35m (0.4ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations` 
+
+
+Started GET "/lugares" for 127.0.0.1 at 2013-04-15 11:23:10 -0300
+Connecting to database specified by database.yml
+
+ActionController::RoutingError (No route matches [GET] "/lugares"):
+  actionpack (3.2.12) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.12) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.12) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.12) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.12) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.12) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.12) lib/rails/engine.rb:479:in `call'
+  railties (3.2.12) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.12) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /home/r4/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/r4/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/r4/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/r4/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (3.5ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2013-04-15 11:23:16 -0300
+
+ActionController::RoutingError (No route matches [GET] "/place"):
+  actionpack (3.2.12) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.12) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.12) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.12) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.12) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.12) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.12) lib/rails/engine.rb:479:in `call'
+  railties (3.2.12) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.12) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /home/r4/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/r4/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/r4/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/r4/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/places" for 127.0.0.1 at 2013-04-15 11:23:18 -0300
+Processing by PlacesController#index as HTML
+  [1m[36mPlace Load (0.3ms)[0m  [1mSELECT `places`.* FROM `places` [0m
+  Rendered places/index.html.erb within layouts/application (1.3ms)
+Compiled places.css  (35ms)  (pid 7587)
+Compiled scaffolds.css  (16ms)  (pid 7587)
+Compiled application.css  (68ms)  (pid 7587)
+Compiled jquery.js  (34ms)  (pid 7587)
+Compiled jquery_ujs.js  (0ms)  (pid 7587)
+Compiled places.js  (93ms)  (pid 7587)
+Compiled application.js  (158ms)  (pid 7587)
+Completed 200 OK in 377ms (Views: 314.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-15 11:23:19 -0300
+Served asset /application.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-15 11:23:19 -0300
+Served asset /scaffolds.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/places.js?body=1" for 127.0.0.1 at 2013-04-15 11:23:19 -0300
+Served asset /places.js - 200 OK (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-15 11:23:19 -0300
+Served asset /jquery.js - 304 Not Modified (40ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-15 11:23:19 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/places.css?body=1" for 127.0.0.1 at 2013-04-15 11:23:19 -0300
+Served asset /places.css - 200 OK (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-15 11:23:19 -0300
+Served asset /application.js - 304 Not Modified (12ms)
+
+
+Started GET "/places/new" for 127.0.0.1 at 2013-04-15 11:23:22 -0300
+Processing by PlacesController#new as HTML
+  Rendered places/_form.html.erb (10.8ms)
+  Rendered places/new.html.erb within layouts/application (16.9ms)
+Completed 200 OK in 32ms (Views: 22.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-15 11:23:22 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/places.css?body=1" for 127.0.0.1 at 2013-04-15 11:23:22 -0300
+Served asset /places.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-15 11:23:22 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/places.js?body=1" for 127.0.0.1 at 2013-04-15 11:23:22 -0300
+Served asset /places.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-15 11:23:22 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-15 11:23:22 -0300
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-15 11:23:22 -0300
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started POST "/places" for 127.0.0.1 at 2013-04-15 11:24:02 -0300
+Processing by PlacesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pWmkMlyrZR/ZFF+pPuDZWP2YwVw2PsfzMYAyFJbRxi8=", "place"=>{"name"=>"Zoo", "city"=>"New York", "state"=>"New York"}, "commit"=>"Create Place"}
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `places` (`city`, `created_at`, `name`, `state`, `updated_at`) VALUES ('New York', '2013-04-15 14:24:02', 'Zoo', 'New York', '2013-04-15 14:24:02')[0m
+  [1m[35m (53.2ms)[0m  COMMIT
+Redirected to http://localhost:3000/places/1
+Completed 302 Found in 99ms (ActiveRecord: 53.7ms)
+
+
+Started GET "/places/1" for 127.0.0.1 at 2013-04-15 11:24:02 -0300
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlace Load (0.5ms)[0m  [1mSELECT `places`.* FROM `places` WHERE `places`.`id` = 1 LIMIT 1[0m
+  Rendered places/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 14ms (Views: 8.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-15 11:24:02 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-15 11:24:02 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-15 11:24:02 -0300
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-15 11:24:02 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/places.css?body=1" for 127.0.0.1 at 2013-04-15 11:24:02 -0300
+Served asset /places.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/places.js?body=1" for 127.0.0.1 at 2013-04-15 11:24:02 -0300
+Served asset /places.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-15 11:24:02 -0300
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/places" for 127.0.0.1 at 2013-04-15 11:24:07 -0300
+Processing by PlacesController#index as HTML
+  [1m[35mPlace Load (0.5ms)[0m  SELECT `places`.* FROM `places` 
+  Rendered places/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 15ms (Views: 12.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-15 11:24:07 -0300
+Served asset /application.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-15 11:24:07 -0300
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-15 11:24:07 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-15 11:24:07 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/places.css?body=1" for 127.0.0.1 at 2013-04-15 11:24:07 -0300
+Served asset /places.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/places.js?body=1" for 127.0.0.1 at 2013-04-15 11:24:07 -0300
+Served asset /places.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-15 11:24:07 -0300
+Served asset /application.js - 304 Not Modified (6ms)
+
+
+Started GET "/places/new" for 127.0.0.1 at 2013-04-15 11:24:08 -0300
+Processing by PlacesController#new as HTML
+  Rendered places/_form.html.erb (3.8ms)
+  Rendered places/new.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 12ms (Views: 11.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-15 11:24:08 -0300
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-15 11:24:08 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/places.css?body=1" for 127.0.0.1 at 2013-04-15 11:24:08 -0300
+Served asset /places.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-15 11:24:08 -0300
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-15 11:24:08 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-15 11:24:08 -0300
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/places.js?body=1" for 127.0.0.1 at 2013-04-15 11:24:08 -0300
+Served asset /places.js - 304 Not Modified (0ms)
+
+
+Started POST "/places" for 127.0.0.1 at 2013-04-15 11:24:30 -0300
+Processing by PlacesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pWmkMlyrZR/ZFF+pPuDZWP2YwVw2PsfzMYAyFJbRxi8=", "place"=>{"name"=>"Mall", "city"=>"Sao Paulo", "state"=>"Sao Paulo"}, "commit"=>"Create Place"}
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO `places` (`city`, `created_at`, `name`, `state`, `updated_at`) VALUES ('Sao Paulo', '2013-04-15 14:24:30', 'Mall', 'Sao Paulo', '2013-04-15 14:24:30')
+  [1m[36m (75.4ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/places/2
+Completed 302 Found in 81ms (ActiveRecord: 76.0ms)
+
+
+Started GET "/places/2" for 127.0.0.1 at 2013-04-15 11:24:30 -0300
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mPlace Load (0.5ms)[0m  SELECT `places`.* FROM `places` WHERE `places`.`id` = 2 LIMIT 1
+  Rendered places/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 14ms (Views: 10.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-15 11:24:30 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-15 11:24:30 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-15 11:24:30 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/places.css?body=1" for 127.0.0.1 at 2013-04-15 11:24:30 -0300
+Served asset /places.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/places.js?body=1" for 127.0.0.1 at 2013-04-15 11:24:30 -0300
+Served asset /places.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-15 11:24:30 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-15 11:24:30 -0300
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/places" for 127.0.0.1 at 2013-04-15 11:24:32 -0300
+Processing by PlacesController#index as HTML
+  [1m[36mPlace Load (0.5ms)[0m  [1mSELECT `places`.* FROM `places` [0m
+  Rendered places/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 13ms (Views: 10.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-15 11:24:32 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-15 11:24:32 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-15 11:24:32 -0300
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/places.css?body=1" for 127.0.0.1 at 2013-04-15 11:24:32 -0300
+Served asset /places.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-15 11:24:32 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/places.js?body=1" for 127.0.0.1 at 2013-04-15 11:24:32 -0300
+Served asset /places.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-15 11:24:32 -0300
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/places/new" for 127.0.0.1 at 2013-04-15 11:24:35 -0300
+Processing by PlacesController#new as HTML
+  Rendered places/_form.html.erb (5.0ms)
+  Rendered places/new.html.erb within layouts/application (43.2ms)
+Completed 200 OK in 49ms (Views: 48.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-15 11:24:35 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-15 11:24:35 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/places.css?body=1" for 127.0.0.1 at 2013-04-15 11:24:35 -0300
+Served asset /places.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-15 11:24:35 -0300
+Served asset /application.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-15 11:24:35 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-15 11:24:35 -0300
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/places.js?body=1" for 127.0.0.1 at 2013-04-15 11:24:35 -0300
+Served asset /places.js - 304 Not Modified (0ms)
+
+
+Started POST "/places" for 127.0.0.1 at 2013-04-15 11:27:18 -0300
+Processing by PlacesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pWmkMlyrZR/ZFF+pPuDZWP2YwVw2PsfzMYAyFJbRxi8=", "place"=>{"name"=>"Coliseum", "city"=>"Rome", "state"=>"Lazio"}, "commit"=>"Create Place"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `places` (`city`, `created_at`, `name`, `state`, `updated_at`) VALUES ('Rome', '2013-04-15 14:27:18', 'Coliseum', 'Lazio', '2013-04-15 14:27:18')[0m
+  [1m[35m (74.2ms)[0m  COMMIT
+Redirected to http://localhost:3000/places/3
+Completed 302 Found in 81ms (ActiveRecord: 74.9ms)
+
+
+Started GET "/places/3" for 127.0.0.1 at 2013-04-15 11:27:18 -0300
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPlace Load (0.6ms)[0m  [1mSELECT `places`.* FROM `places` WHERE `places`.`id` = 3 LIMIT 1[0m
+  Rendered places/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 16ms (Views: 13.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-15 11:27:18 -0300
+Served asset /application.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/places.css?body=1" for 127.0.0.1 at 2013-04-15 11:27:18 -0300
+Served asset /places.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-15 11:27:18 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-15 11:27:18 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-15 11:27:18 -0300
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-15 11:27:18 -0300
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/places.js?body=1" for 127.0.0.1 at 2013-04-15 11:27:18 -0300
+Served asset /places.js - 304 Not Modified (0ms)
+
+
+Started GET "/places" for 127.0.0.1 at 2013-04-15 11:27:50 -0300
+Processing by PlacesController#index as HTML
+  [1m[35mPlace Load (0.4ms)[0m  SELECT `places`.* FROM `places` 
+  Rendered places/index.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 17ms (Views: 15.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-15 11:27:50 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-15 11:27:50 -0300
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/places.js?body=1" for 127.0.0.1 at 2013-04-15 11:27:50 -0300
+Served asset /places.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-15 11:27:50 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/places.css?body=1" for 127.0.0.1 at 2013-04-15 11:27:50 -0300
+Served asset /places.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-15 11:27:50 -0300
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-15 11:27:50 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/places.json" for 127.0.0.1 at 2013-04-15 11:33:21 -0300
+Processing by PlacesController#index as JSON
+  [1m[36mPlace Load (0.2ms)[0m  [1mSELECT `places`.* FROM `places` [0m
+Completed 200 OK in 4ms (Views: 1.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places.json" for 127.0.0.1 at 2013-04-15 11:33:43 -0300
+Processing by PlacesController#index as JSON
+  [1m[35mPlace Load (0.1ms)[0m  SELECT `places`.* FROM `places` 
+  Rendered places/index.json.rabl (5.5ms)
+Completed 200 OK in 23ms (Views: 8.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/places/1.json" for 127.0.0.1 at 2013-04-15 11:34:11 -0300
+Processing by PlacesController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mPlace Load (0.4ms)[0m  [1mSELECT `places`.* FROM `places` WHERE `places`.`id` = 1 LIMIT 1[0m
+  Rendered places/show.json.rabl (1.4ms)
+Completed 200 OK in 7ms (Views: 4.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/places/1.json" for 127.0.0.1 at 2013-04-15 11:40:48 -0300
+Processing by PlacesController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35mPlace Load (0.2ms)[0m  SELECT `places`.* FROM `places` WHERE `places`.`id` = 1 LIMIT 1
+  Rendered places/show.json.rabl (0.9ms)
+Completed 200 OK in 6ms (Views: 3.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places/2.json" for 127.0.0.1 at 2013-04-15 11:41:44 -0300
+Processing by PlacesController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[36mPlace Load (0.4ms)[0m  [1mSELECT `places`.* FROM `places` WHERE `places`.`id` = 2 LIMIT 1[0m
+  Rendered places/show.json.rabl (0.7ms)
+Completed 200 OK in 6ms (Views: 3.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/places/json" for 127.0.0.1 at 2013-04-15 11:41:50 -0300
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"json"}
+  [1m[35mPlace Load (0.3ms)[0m  SELECT `places`.* FROM `places` WHERE `places`.`id` = 0 LIMIT 1
+Completed 404 Not Found in 1ms
+
+ActiveRecord::RecordNotFound (Couldn't find Place with id=json):
+  app/controllers/places_controller.rb:12:in `show'
+
+
+  Rendered /home/r4/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
+  Rendered /home/r4/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /home/r4/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (15.1ms)
+
+
+Started GET "/places" for 127.0.0.1 at 2013-04-15 11:41:55 -0300
+Processing by PlacesController#index as HTML
+  [1m[36mPlace Load (0.2ms)[0m  [1mSELECT `places`.* FROM `places` [0m
+  Rendered places/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 66ms (Views: 62.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/places.css?body=1" for 127.0.0.1 at 2013-04-15 11:41:55 -0300
+Served asset /places.css - 200 OK (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-15 11:41:55 -0300
+Served asset /application.css - 200 OK (10ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-15 11:41:55 -0300
+Served asset /scaffolds.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-15 11:41:55 -0300
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/places.js?body=1" for 127.0.0.1 at 2013-04-15 11:41:55 -0300
+Served asset /places.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-15 11:41:55 -0300
+Served asset /jquery.js - 200 OK (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-15 11:41:55 -0300
+Served asset /application.js - 200 OK (2ms)
+
+
+Started GET "/places/3.json" for 127.0.0.1 at 2013-04-15 11:42:02 -0300
+Processing by PlacesController#show as JSON
+  Parameters: {"id"=>"3"}
+  [1m[35mPlace Load (0.2ms)[0m  SELECT `places`.* FROM `places` WHERE `places`.`id` = 3 LIMIT 1
+  Rendered places/show.json.rabl (0.9ms)
+Completed 200 OK in 7ms (Views: 4.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places" for 127.0.0.1 at 2013-04-16 13:03:55 -0300
+Connecting to database specified by database.yml
+Processing by PlacesController#index as HTML
+  [1m[36mPlace Load (18.9ms)[0m  [1mSELECT `places`.* FROM `places` [0m
+  Rendered places/index.html.erb within layouts/application (61.3ms)
+Completed 200 OK in 429ms (Views: 304.0ms | ActiveRecord: 20.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-16 13:03:56 -0300
+Served asset /application.css - 304 Not Modified (16ms)
+
+
+Started GET "/assets/places.css?body=1" for 127.0.0.1 at 2013-04-16 13:03:56 -0300
+Served asset /places.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-16 13:03:56 -0300
+Served asset /scaffolds.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-16 13:03:56 -0300
+Served asset /jquery.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/places.js?body=1" for 127.0.0.1 at 2013-04-16 13:03:56 -0300
+Served asset /places.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-16 13:03:56 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-16 13:03:56 -0300
+Served asset /application.js - 304 Not Modified (74ms)
+
+
+Started GET "/places/.json" for 127.0.0.1 at 2013-04-16 13:04:04 -0300
+
+ActionController::RoutingError (No route matches [GET] "/places/.json"):
+  actionpack (3.2.12) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.12) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.12) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.12) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.12) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.12) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.12) lib/rails/engine.rb:479:in `call'
+  railties (3.2.12) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.12) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /home/r4/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/r4/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/r4/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/r4/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.4ms)
+
+
+Started GET "/places/1.json" for 127.0.0.1 at 2013-04-16 13:04:09 -0300
+Processing by PlacesController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35mPlace Load (0.4ms)[0m  SELECT `places`.* FROM `places` WHERE `places`.`id` = 1 LIMIT 1
+  Rendered places/show.json.rabl (1.8ms)
+Completed 200 OK in 50ms (Views: 46.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/places/items.json" for 127.0.0.1 at 2013-04-16 14:50:41 -0300
+Processing by PlacesController#show as JSON
+  Parameters: {"id"=>"items"}
+  [1m[36mPlace Load (0.7ms)[0m  [1mSELECT `places`.* FROM `places` WHERE `places`.`id` = 0 LIMIT 1[0m
+Completed 404 Not Found in 4ms
+
+ActiveRecord::RecordNotFound (Couldn't find Place with id=items):
+  app/controllers/places_controller.rb:12:in `show'
+
+
+  Rendered /home/r4/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.1ms)
+  Rendered /home/r4/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.5ms)
+  Rendered /home/r4/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (123.7ms)
+
+
+Started GET "/places/places.json" for 127.0.0.1 at 2013-04-16 14:51:06 -0300
+Processing by PlacesController#show as JSON
+  Parameters: {"id"=>"places"}
+  [1m[35mPlace Load (0.2ms)[0m  SELECT `places`.* FROM `places` WHERE `places`.`id` = 0 LIMIT 1
+Completed 404 Not Found in 2ms
+
+ActiveRecord::RecordNotFound (Couldn't find Place with id=places):
+  app/controllers/places_controller.rb:12:in `show'
+
+
+  Rendered /home/r4/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
+  Rendered /home/r4/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /home/r4/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (15.0ms)
+
+
+Started GET "/places/2.json" for 127.0.0.1 at 2013-04-16 14:51:20 -0300
+Processing by PlacesController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[36mPlace Load (0.4ms)[0m  [1mSELECT `places`.* FROM `places` WHERE `places`.`id` = 2 LIMIT 1[0m
+  Rendered places/show.json.rabl (2.3ms)
+Completed 200 OK in 10ms (Views: 8.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/places.json" for 127.0.0.1 at 2013-04-16 14:51:42 -0300
+Processing by PlacesController#index as JSON
+  [1m[35mPlace Load (0.7ms)[0m  SELECT `places`.* FROM `places` 
+  Rendered places/index.json.rabl (5.3ms)
+Completed 200 OK in 26ms (Views: 24.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/places.json" for 192.168.0.13 at 2013-04-16 17:44:25 -0300
+Connecting to database specified by database.yml
+Processing by PlacesController#index as JSON
+  [1m[36mPlace Load (0.2ms)[0m  [1mSELECT `places`.* FROM `places` [0m
+  Rendered places/index.json.rabl (7.3ms)
+Completed 200 OK in 138ms (Views: 25.1ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/places/1.json" for 127.0.0.1 at 2013-04-17 09:54:42 -0300
+Connecting to database specified by database.yml
+Processing by PlacesController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mPlace Load (18.8ms)[0m  [1mSELECT `places`.* FROM `places` WHERE `places`.`id` = 1 LIMIT 1[0m
+  Rendered places/show.json.rabl (4.5ms)
+Completed 200 OK in 227ms (Views: 130.8ms | ActiveRecord: 20.1ms)
+
+
+Started GET "/places.json" for 127.0.0.1 at 2013-04-17 09:55:00 -0300
+Processing by PlacesController#index as JSON
+  [1m[35mPlace Load (0.5ms)[0m  SELECT `places`.* FROM `places` 
+  Rendered places/index.json.rabl (8.8ms)
+Completed 200 OK in 41ms (Views: 37.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/places.json" for 127.0.0.1 at 2013-04-17 09:59:58 -0300
+Connecting to database specified by database.yml
+Processing by PlacesController#index as JSON
+  [1m[36mPlace Load (0.2ms)[0m  [1mSELECT `places`.* FROM `places` [0m
+  Rendered places/index.json.rabl (7.7ms)
+Completed 200 OK in 148ms (Views: 64.7ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/places.json" for 127.0.0.1 at 2013-04-17 10:00:10 -0300
+Processing by PlacesController#index as JSON
+  [1m[35mPlace Load (1.9ms)[0m  SELECT `places`.* FROM `places` 
+  Rendered places/index.json.rabl (5.7ms)
+Completed 200 OK in 13ms (Views: 8.6ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/places.json" for 127.0.0.1 at 2013-04-17 10:00:48 -0300
+Processing by PlacesController#index as JSON
+  [1m[36mPlace Load (0.2ms)[0m  [1mSELECT `places`.* FROM `places` [0m
+  Rendered places/index.json.rabl (7.8ms)
+Completed 200 OK in 12ms (Views: 10.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places" for 192.168.0.13 at 2013-04-17 10:38:28 -0300
+Connecting to database specified by database.yml
+Processing by PlacesController#index as HTML
+  [1m[36mPlace Load (0.1ms)[0m  [1mSELECT `places`.* FROM `places` [0m
+  Rendered places/index.html.erb within layouts/application (26.2ms)
+Completed 200 OK in 1631ms (Views: 1549.2ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/places" for 192.168.0.13 at 2013-04-17 10:42:00 -0300
+Processing by PlacesController#index as HTML
+  [1m[35mPlace Load (0.2ms)[0m  SELECT `places`.* FROM `places` 
+  Rendered places/index.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 26ms (Views: 24.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places.json" for 192.168.0.13 at 2013-04-17 10:45:16 -0300
+Processing by PlacesController#index as JSON
+  [1m[36mPlace Load (0.2ms)[0m  [1mSELECT `places`.* FROM `places` [0m
+  Rendered places/index.json.rabl (58.2ms)
+Completed 200 OK in 64ms (Views: 62.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places.json" for 192.168.0.13 at 2013-04-17 10:46:23 -0300
+Processing by PlacesController#index as JSON
+  [1m[35mPlace Load (0.2ms)[0m  SELECT `places`.* FROM `places` 
+  Rendered places/index.json.rabl (5.4ms)
+Completed 200 OK in 10ms (Views: 8.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places.json" for 127.0.0.1 at 2013-04-17 11:59:51 -0300
+Processing by PlacesController#index as JSON
+  [1m[36mPlace Load (0.1ms)[0m  [1mSELECT `places`.* FROM `places` [0m
+  Rendered places/index.json.rabl (12.6ms)
+Completed 200 OK in 16ms (Views: 14.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/places.json" for 127.0.0.1 at 2013-04-17 12:00:14 -0300
+Processing by PlacesController#index as JSON
+  [1m[35mPlace Load (0.2ms)[0m  SELECT `places`.* FROM `places` 
+  Rendered places/index.json.rabl (10.4ms)
+Completed 200 OK in 14ms (Views: 12.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places.json" for 127.0.0.1 at 2013-04-17 12:02:46 -0300
+Processing by PlacesController#index as JSON
+  [1m[36mPlace Load (5.0ms)[0m  [1mSELECT `places`.* FROM `places` [0m
+  Rendered places/index.json.rabl (4.7ms)
+Completed 200 OK in 14ms (Views: 7.2ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/places.json" for 127.0.0.1 at 2013-04-17 12:05:09 -0300
+Processing by PlacesController#index as JSON
+  [1m[35mPlace Load (0.2ms)[0m  SELECT `places`.* FROM `places` 
+  Rendered places/index.json.rabl (39.6ms)
+Completed 200 OK in 44ms (Views: 42.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places.json" for 127.0.0.1 at 2013-04-17 12:07:24 -0300
+Processing by PlacesController#index as JSON
+  [1m[36mPlace Load (0.4ms)[0m  [1mSELECT `places`.* FROM `places` [0m
+  Rendered places/index.json.rabl (5.2ms)
+Completed 200 OK in 10ms (Views: 8.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/places.json" for 127.0.0.1 at 2013-04-17 12:15:46 -0300
+Processing by PlacesController#index as JSON
+  [1m[35mPlace Load (0.3ms)[0m  SELECT `places`.* FROM `places` 
+  Rendered places/index.json.rabl (3.9ms)
+Completed 200 OK in 8ms (Views: 6.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/places.json" for 127.0.0.1 at 2013-04-17 12:27:46 -0300
+Processing by PlacesController#index as JSON
+  [1m[36mPlace Load (0.2ms)[0m  [1mSELECT `places`.* FROM `places` [0m
+  Rendered places/index.json.rabl (3.6ms)
+Completed 200 OK in 7ms (Views: 5.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places.json" for 127.0.0.1 at 2013-04-17 12:30:46 -0300
+Processing by PlacesController#index as JSON
+  [1m[35mPlace Load (0.2ms)[0m  SELECT `places`.* FROM `places` 
+  Rendered places/index.json.rabl (3.6ms)
+Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places.json" for 127.0.0.1 at 2013-04-17 12:30:49 -0300
+Processing by PlacesController#index as JSON
+  [1m[36mPlace Load (0.2ms)[0m  [1mSELECT `places`.* FROM `places` [0m
+  Rendered places/index.json.rabl (5.1ms)
+Completed 200 OK in 9ms (Views: 7.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places.json" for 127.0.0.1 at 2013-04-17 12:30:49 -0300
+Processing by PlacesController#index as JSON
+  [1m[35mPlace Load (0.2ms)[0m  SELECT `places`.* FROM `places` 
+  Rendered places/index.json.rabl (4.5ms)
+Completed 200 OK in 9ms (Views: 7.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places.json" for 127.0.0.1 at 2013-04-17 12:30:49 -0300
+Processing by PlacesController#index as JSON
+  [1m[36mPlace Load (0.2ms)[0m  [1mSELECT `places`.* FROM `places` [0m
+  Rendered places/index.json.rabl (5.2ms)
+Completed 200 OK in 10ms (Views: 7.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places.json" for 127.0.0.1 at 2013-04-17 12:30:49 -0300
+Processing by PlacesController#index as JSON
+  [1m[35mPlace Load (0.2ms)[0m  SELECT `places`.* FROM `places` 
+  Rendered places/index.json.rabl (8.6ms)
+Completed 200 OK in 17ms (Views: 15.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places.json" for 127.0.0.1 at 2013-04-17 12:32:04 -0300
+Processing by PlacesController#index as JSON
+  [1m[36mPlace Load (2.9ms)[0m  [1mSELECT `places`.* FROM `places` [0m
+  Rendered places/index.json.rabl (4.4ms)
+Completed 200 OK in 11ms (Views: 7.1ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/places" for 127.0.0.1 at 2013-04-17 12:35:51 -0300
+Processing by PlacesController#index as HTML
+  [1m[35mPlace Load (0.2ms)[0m  SELECT `places`.* FROM `places` 
+  Rendered places/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 23ms (Views: 20.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-17 12:35:51 -0300
+Served asset /application.css - 304 Not Modified (13ms)
+
+
+Started GET "/assets/places.css?body=1" for 127.0.0.1 at 2013-04-17 12:35:51 -0300
+Served asset /places.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-17 12:35:51 -0300
+Served asset /scaffolds.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-17 12:35:51 -0300
+Served asset /jquery.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-17 12:35:51 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/places.js?body=1" for 127.0.0.1 at 2013-04-17 12:35:51 -0300
+Served asset /places.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-17 12:35:51 -0300
+Served asset /application.js - 304 Not Modified (9ms)
+
+
+Started GET "/places/new" for 127.0.0.1 at 2013-04-17 12:35:54 -0300
+Processing by PlacesController#new as HTML
+  Rendered places/_form.html.erb (74.0ms)
+  Rendered places/new.html.erb within layouts/application (99.7ms)
+Completed 200 OK in 138ms (Views: 136.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-17 12:35:54 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-17 12:35:54 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/places.css?body=1" for 127.0.0.1 at 2013-04-17 12:35:54 -0300
+Served asset /places.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-17 12:35:54 -0300
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-17 12:35:54 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/places.js?body=1" for 127.0.0.1 at 2013-04-17 12:35:54 -0300
+Served asset /places.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-17 12:35:54 -0300
+Served asset /application.js - 304 Not Modified (4ms)
+
+
+Started POST "/places" for 192.168.0.13 at 2013-04-17 13:05:49 -0300
+Connecting to database specified by database.yml
+Processing by PlacesController#create as JSON
+  Parameters: {"place"=>{"name"=>"Parque", "city"=>"Sao Paulo", "state"=>"SP"}}
+WARNING: Can't verify CSRF token authenticity
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (17.9ms)[0m  INSERT INTO `places` (`city`, `created_at`, `name`, `state`, `updated_at`) VALUES ('Sao Paulo', '2013-04-17 16:05:51', 'Parque', 'SP', '2013-04-17 16:05:51')
+  [1m[36m (96.6ms)[0m  [1mCOMMIT[0m
+Completed 201 Created in 274ms (Views: 3.9ms | ActiveRecord: 115.9ms)
+
+
+Started GET "/places" for 127.0.0.1 at 2013-04-17 13:06:14 -0300
+Processing by PlacesController#index as HTML
+  [1m[35mPlace Load (1.5ms)[0m  SELECT `places`.* FROM `places` 
+  Rendered places/index.html.erb within layouts/application (26.9ms)
+Completed 200 OK in 135ms (Views: 125.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-17 13:06:14 -0300
+Served asset /application.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/places.css?body=1" for 127.0.0.1 at 2013-04-17 13:06:14 -0300
+Served asset /places.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-17 13:06:14 -0300
+Served asset /scaffolds.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-17 13:06:14 -0300
+Served asset /jquery.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-17 13:06:14 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/places.js?body=1" for 127.0.0.1 at 2013-04-17 13:06:14 -0300
+Served asset /places.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-17 13:06:14 -0300
+Served asset /application.js - 304 Not Modified (60ms)
+
+
+Started GET "/places,json" for 127.0.0.1 at 2013-04-17 13:06:18 -0300
+
+ActionController::RoutingError (No route matches [GET] "/places,json"):
+  actionpack (3.2.12) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.12) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.12) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.12) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.12) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.12) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.12) lib/rails/engine.rb:479:in `call'
+  railties (3.2.12) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.12) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.5.1) lib/thin/connection.rb:81:in `block in pre_process'
+  thin (1.5.1) lib/thin/connection.rb:79:in `catch'
+  thin (1.5.1) lib/thin/connection.rb:79:in `pre_process'
+  thin (1.5.1) lib/thin/connection.rb:54:in `process'
+  thin (1.5.1) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.5.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.5.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.5) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.5) lib/rack/server.rb:268:in `start'
+  railties (3.2.12) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.12) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.12) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.12) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /home/r4/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.6ms)
+
+
+Started GET "/places.json" for 127.0.0.1 at 2013-04-17 13:06:23 -0300
+Processing by PlacesController#index as JSON
+  [1m[36mPlace Load (0.2ms)[0m  [1mSELECT `places`.* FROM `places` [0m
+  Rendered places/index.json.rabl (8.2ms)
+Completed 200 OK in 15ms (Views: 12.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places.json" for 192.168.0.15 at 2013-04-17 13:16:35 -0300
+Processing by PlacesController#index as JSON
+  [1m[35mPlace Load (0.2ms)[0m  SELECT `places`.* FROM `places` 
+  Rendered places/index.json.rabl (7.8ms)
+Completed 200 OK in 14ms (Views: 11.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places.json" for 127.0.0.1 at 2013-04-17 13:17:28 -0300
+Processing by PlacesController#index as JSON
+  [1m[36mPlace Load (6.8ms)[0m  [1mSELECT `places`.* FROM `places` [0m
+  Rendered places/index.json.rabl (6.6ms)
+Completed 200 OK in 18ms (Views: 9.7ms | ActiveRecord: 6.8ms)
+
+
+Started GET "/places.json" for 192.168.0.15 at 2013-04-17 13:20:50 -0300
+Processing by PlacesController#index as JSON
+  [1m[35mPlace Load (0.2ms)[0m  SELECT `places`.* FROM `places` 
+  Rendered places/index.json.rabl (4.5ms)
+Completed 200 OK in 9ms (Views: 7.0ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/places" for 192.168.0.15 at 2013-04-17 13:21:06 -0300
+Processing by PlacesController#create as JSON
+  Parameters: {"place"=>{"name"=>"Cinema", "city"=>"Sqo Paulo", "state"=>"SP"}}
+WARNING: Can't verify CSRF token authenticity
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `places` (`city`, `created_at`, `name`, `state`, `updated_at`) VALUES ('Sqo Paulo', '2013-04-17 16:21:06', 'Cinema', 'SP', '2013-04-17 16:21:06')
+  [1m[36m (100.7ms)[0m  [1mCOMMIT[0m
+Completed 201 Created in 106ms (Views: 1.1ms | ActiveRecord: 101.3ms)
+
+
+Started GET "/places.json" for 127.0.0.1 at 2013-04-17 13:21:19 -0300
+Processing by PlacesController#index as JSON
+  [1m[35mPlace Load (0.4ms)[0m  SELECT `places`.* FROM `places` 
+  Rendered places/index.json.rabl (6.1ms)
+Completed 200 OK in 10ms (Views: 8.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/places.json" for 127.0.0.1 at 2013-04-17 15:03:45 -0300
+Processing by PlacesController#index as JSON
+  [1m[36mPlace Load (0.1ms)[0m  [1mSELECT `places`.* FROM `places` [0m
+  Rendered places/index.json.rabl (5.0ms)
+Completed 200 OK in 9ms (Views: 7.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/places.json" for 127.0.0.1 at 2013-04-17 15:04:06 -0300
+Processing by PlacesController#index as JSON
+  [1m[35mPlace Load (0.8ms)[0m  SELECT `places`.* FROM `places` 
+  Rendered places/index.json.rabl (6.1ms)
+Completed 200 OK in 11ms (Views: 8.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/places.json" for 127.0.0.1 at 2013-04-17 15:04:07 -0300
+Processing by PlacesController#index as JSON
+  [1m[36mPlace Load (0.4ms)[0m  [1mSELECT `places`.* FROM `places` [0m
+  Rendered places/index.json.rabl (5.6ms)
+Completed 200 OK in 10ms (Views: 7.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/places.json" for 127.0.0.1 at 2013-04-17 15:04:33 -0300
+Processing by PlacesController#index as JSON
+  [1m[35mPlace Load (0.4ms)[0m  SELECT `places`.* FROM `places` 
+  Rendered places/index.json.rabl (5.5ms)
+Completed 200 OK in 9ms (Views: 7.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/places.json" for 127.0.0.1 at 2013-04-17 15:04:34 -0300
+Processing by PlacesController#index as JSON
+  [1m[36mPlace Load (0.1ms)[0m  [1mSELECT `places`.* FROM `places` [0m
+  Rendered places/index.json.rabl (6.1ms)
+Completed 200 OK in 10ms (Views: 8.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/places.json" for 127.0.0.1 at 2013-04-17 15:04:34 -0300
+Processing by PlacesController#index as JSON
+  [1m[35mPlace Load (0.1ms)[0m  SELECT `places`.* FROM `places` 
+  Rendered places/index.json.rabl (5.9ms)
+Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/places.json" for 127.0.0.1 at 2013-04-17 15:04:34 -0300
+Processing by PlacesController#index as JSON
+  [1m[36mPlace Load (0.2ms)[0m  [1mSELECT `places`.* FROM `places` [0m
+  Rendered places/index.json.rabl (5.4ms)
+Completed 200 OK in 9ms (Views: 7.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places.json" for 127.0.0.1 at 2013-04-17 15:04:34 -0300
+Processing by PlacesController#index as JSON
+  [1m[35mPlace Load (0.1ms)[0m  SELECT `places`.* FROM `places` 
+  Rendered places/index.json.rabl (5.5ms)
+Completed 200 OK in 9ms (Views: 7.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/places.json" for 127.0.0.1 at 2013-04-17 15:05:27 -0300
+Processing by PlacesController#index as JSON
+  [1m[36mPlace Load (1.0ms)[0m  [1mSELECT `places`.* FROM `places` [0m
+  Rendered places/index.json.rabl (5.8ms)
+Completed 200 OK in 10ms (Views: 8.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/places.json" for 192.168.0.15 at 2013-04-17 15:09:58 -0300
+Processing by PlacesController#index as JSON
+  [1m[35mPlace Load (0.2ms)[0m  SELECT `places`.* FROM `places` 
+  Rendered places/index.json.rabl (5.5ms)
+Completed 200 OK in 11ms (Views: 8.6ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/places" for 192.168.0.15 at 2013-04-17 15:10:18 -0300
+Processing by PlacesController#create as JSON
+  Parameters: {"place"=>{"name"=>"Restaurante", "city"=>"Cotia", "state"=>"SP"}}
+WARNING: Can't verify CSRF token authenticity
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `places` (`city`, `created_at`, `name`, `state`, `updated_at`) VALUES ('Cotia', '2013-04-17 18:10:18', 'Restaurante', 'SP', '2013-04-17 18:10:18')
+  [1m[36m (90.9ms)[0m  [1mCOMMIT[0m
+Completed 201 Created in 96ms (Views: 1.5ms | ActiveRecord: 91.5ms)
+
+
+Started GET "/places.json" for 192.168.0.15 at 2013-04-17 15:10:25 -0300
+Processing by PlacesController#index as JSON
+  [1m[35mPlace Load (0.4ms)[0m  SELECT `places`.* FROM `places` 
+  Rendered places/index.json.rabl (9.6ms)
+Completed 200 OK in 15ms (Views: 12.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/places.json" for 192.168.0.15 at 2013-04-17 15:34:53 -0300
+Processing by PlacesController#index as JSON
+  [1m[36mPlace Load (0.2ms)[0m  [1mSELECT `places`.* FROM `places` [0m
+  Rendered places/index.json.rabl (8.8ms)
+Completed 200 OK in 14ms (Views: 12.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places.json" for 192.168.0.15 at 2013-04-17 16:01:00 -0300
+Processing by PlacesController#index as JSON
+  [1m[35mPlace Load (0.2ms)[0m  SELECT `places`.* FROM `places` 
+  Rendered places/index.json.rabl (7.2ms)
+Completed 200 OK in 12ms (Views: 10.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places.json" for 192.168.0.15 at 2013-04-17 16:53:17 -0300
+Processing by PlacesController#index as JSON
+  [1m[36mPlace Load (0.1ms)[0m  [1mSELECT `places`.* FROM `places` [0m
+  Rendered places/index.json.rabl (7.5ms)
+Completed 200 OK in 12ms (Views: 9.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/places.json" for 192.168.0.15 at 2013-04-17 16:54:11 -0300
+Processing by PlacesController#index as JSON
+  [1m[35mPlace Load (0.2ms)[0m  SELECT `places`.* FROM `places` 
+  Rendered places/index.json.rabl (6.7ms)
+Completed 200 OK in 12ms (Views: 9.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places.json" for 192.168.0.15 at 2013-04-17 16:55:29 -0300
+Processing by PlacesController#index as JSON
+  [1m[36mPlace Load (0.2ms)[0m  [1mSELECT `places`.* FROM `places` [0m
+  Rendered places/index.json.rabl (7.4ms)
+Completed 200 OK in 13ms (Views: 10.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places.json" for 192.168.0.15 at 2013-04-17 17:01:08 -0300
+Processing by PlacesController#index as JSON
+  [1m[35mPlace Load (0.2ms)[0m  SELECT `places`.* FROM `places` 
+  Rendered places/index.json.rabl (9.0ms)
+Completed 200 OK in 14ms (Views: 12.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places.json" for 192.168.0.15 at 2013-04-17 17:01:30 -0300
+Processing by PlacesController#index as JSON
+  [1m[36mPlace Load (0.2ms)[0m  [1mSELECT `places`.* FROM `places` [0m
+  Rendered places/index.json.rabl (6.8ms)
+Completed 200 OK in 12ms (Views: 10.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places.json" for 192.168.0.15 at 2013-04-17 17:18:21 -0300
+Processing by PlacesController#index as JSON
+  [1m[35mPlace Load (0.2ms)[0m  SELECT `places`.* FROM `places` 
+  Rendered places/index.json.rabl (8.6ms)
+Completed 200 OK in 14ms (Views: 11.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places.json" for 192.168.0.15 at 2013-04-17 17:19:48 -0300
+Processing by PlacesController#index as JSON
+  [1m[36mPlace Load (0.2ms)[0m  [1mSELECT `places`.* FROM `places` [0m
+  Rendered places/index.json.rabl (7.6ms)
+Completed 200 OK in 13ms (Views: 10.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places.json" for 192.168.0.15 at 2013-04-17 17:25:15 -0300
+Processing by PlacesController#index as JSON
+  [1m[35mPlace Load (0.2ms)[0m  SELECT `places`.* FROM `places` 
+  Rendered places/index.json.rabl (52.4ms)
+Completed 200 OK in 58ms (Views: 55.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places.json" for 192.168.0.15 at 2013-04-17 17:30:36 -0300
+Processing by PlacesController#index as JSON
+  [1m[36mPlace Load (0.2ms)[0m  [1mSELECT `places`.* FROM `places` [0m
+  Rendered places/index.json.rabl (7.1ms)
+Completed 200 OK in 13ms (Views: 10.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places.json" for 127.0.0.1 at 2013-04-18 09:07:36 -0300
+Connecting to database specified by database.yml
+Processing by PlacesController#index as JSON
+  [1m[36mPlace Load (0.1ms)[0m  [1mSELECT `places`.* FROM `places` [0m
+  Rendered places/index.json.rabl (8.2ms)
+Completed 200 OK in 112ms (Views: 47.1ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/places.json" for 192.168.0.14 at 2013-04-18 09:09:53 -0300
+Processing by PlacesController#index as JSON
+  [1m[35mPlace Load (0.2ms)[0m  SELECT `places`.* FROM `places` 
+  Rendered places/index.json.rabl (9.6ms)
+Completed 200 OK in 16ms (Views: 13.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places.json" for 192.168.0.14 at 2013-04-18 09:15:24 -0300
+Processing by PlacesController#index as JSON
+  [1m[36mPlace Load (0.2ms)[0m  [1mSELECT `places`.* FROM `places` [0m
+  Rendered places/index.json.rabl (5.6ms)
+Completed 200 OK in 10ms (Views: 8.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places.json" for 192.168.0.14 at 2013-04-18 09:16:25 -0300
+Processing by PlacesController#index as JSON
+  [1m[35mPlace Load (0.2ms)[0m  SELECT `places`.* FROM `places` 
+  Rendered places/index.json.rabl (7.9ms)
+Completed 200 OK in 13ms (Views: 11.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places.json" for 192.168.0.14 at 2013-04-18 09:22:51 -0300
+Processing by PlacesController#index as JSON
+  [1m[36mPlace Load (0.2ms)[0m  [1mSELECT `places`.* FROM `places` [0m
+  Rendered places/index.json.rabl (10.2ms)
+Completed 200 OK in 15ms (Views: 13.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places.json" for 192.168.0.14 at 2013-04-18 09:23:46 -0300
+Processing by PlacesController#index as JSON
+  [1m[35mPlace Load (0.2ms)[0m  SELECT `places`.* FROM `places` 
+  Rendered places/index.json.rabl (5.6ms)
+Completed 200 OK in 10ms (Views: 8.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places.json" for 192.168.0.14 at 2013-04-18 09:25:38 -0300
+Processing by PlacesController#index as JSON
+  [1m[36mPlace Load (0.2ms)[0m  [1mSELECT `places`.* FROM `places` [0m
+  Rendered places/index.json.rabl (10.0ms)
+Completed 200 OK in 15ms (Views: 13.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places.json" for 192.168.0.14 at 2013-04-18 09:26:16 -0300
+Processing by PlacesController#index as JSON
+  [1m[35mPlace Load (0.2ms)[0m  SELECT `places`.* FROM `places` 
+  Rendered places/index.json.rabl (5.6ms)
+Completed 200 OK in 9ms (Views: 7.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places.json" for 192.168.0.14 at 2013-04-18 09:28:42 -0300
+Processing by PlacesController#index as JSON
+  [1m[36mPlace Load (0.2ms)[0m  [1mSELECT `places`.* FROM `places` [0m
+  Rendered places/index.json.rabl (8.1ms)
+Completed 200 OK in 13ms (Views: 11.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places.json" for 192.168.0.14 at 2013-04-18 09:40:41 -0300
+Processing by PlacesController#index as JSON
+  [1m[35mPlace Load (0.2ms)[0m  SELECT `places`.* FROM `places` 
+  Rendered places/index.json.rabl (6.9ms)
+Completed 200 OK in 12ms (Views: 10.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places.json" for 192.168.0.14 at 2013-04-18 09:43:56 -0300
+Processing by PlacesController#index as JSON
+  [1m[36mPlace Load (0.2ms)[0m  [1mSELECT `places`.* FROM `places` [0m
+  Rendered places/index.json.rabl (5.8ms)
+Completed 200 OK in 11ms (Views: 8.9ms | ActiveRecord: 0.2ms)
